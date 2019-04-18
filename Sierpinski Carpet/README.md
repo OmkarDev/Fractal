@@ -1,5 +1,7 @@
 # Sierpinski Carpet
 
+**ps: use `space`**
+
 Gif
 
 ![Sierpinksi Carpet Gif](https://raw.githubusercontent.com/OmkarDev/Fractal/master/Sierpinski%20Carpet/images/Sierpinksi%20Carpet%20Gif.gif)
