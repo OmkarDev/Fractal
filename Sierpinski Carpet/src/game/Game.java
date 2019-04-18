@@ -9,20 +9,20 @@ import window.Window;
 
 public class Game extends Window implements KeyListener {
 
-	ArrayList<Square> sqaures = new ArrayList<Square>();
+	ArrayList<Square> squares = new ArrayList<Square>();
 	static int size = 600;
 	int w = size / 7;
 
 	public Game(int width, int height, String title) {
 		super(width, height, title);
-		sqaures.add(new Square(0, 0, w));
+		squares.add(new Square(0, 0, w));
 	}
 
 	public void draw() {
 		background(Color.black);
 		g.setColor(Color.white);
 		g.translate(width / 2, height / 2 - 15);
-		for (Square square : sqaures) {
+		for (Square square : squares) {
 			g.fillRect((int) square.x, (int) square.y, (int) square.w, (int) square.w);
 		}
 	}
@@ -40,11 +40,11 @@ public class Game extends Window implements KeyListener {
 
 	public void keyPressed(KeyEvent e) {
 		ArrayList<Square> newSquares = new ArrayList<Square>();
-		for (Square s : sqaures) {
+		for (Square s : squares) {
 			newSquares.add(s);
 			newSquares.addAll(s.makeSquares());
 		}
-		sqaures = newSquares;
+		squares = newSquares;
 	}
 
 	public void keyReleased(KeyEvent e) {
